@@ -1,0 +1,382 @@
+/* =========== DEFINIÇÃO DAS CORES DO SITE */
+:root {
+    --primary: #fc5185;
+    --secondary: #364f6b;
+    --primary-dark: #f83771;
+    --ligth: #f0f0f0;
+    --background-ligth: #fdfbfb;
+    --medium: #cacaca;
+    --dark: #a2a2a2;
+}
+
+/* ========IMPORTAÇÃO DA FONTE EXTERNA PARA A LOGO */
+@font-face {
+    font-family: 'bristol';
+    src: url('../fonte_logo/Bristol.otf') format('opentype');
+}
+
+.logo {
+    font-family: 'bristol', times, serif;
+    font-size: 50px;
+}
+
+/* ==========FONTE DO RESTANTE DO SITE============== */
+
+body, html {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+
+.subtitle {
+    color: var(--medium);
+    font-weight: 400;
+}
+
+/* ===========CSS DO HEADER============= */
+
+#header {
+    width: 100%;
+    background-color: #ffffff;
+    transition: background ease-out 0.2s;
+}
+
+#header .nav-link{
+   font-weight: 500;
+   border-bottom: solid 4px transparent
+}
+
+#header .nav-link:hover{
+    border-bottom: solid 4px var(--secondary);
+    color: var(--secondary);
+ }
+
+.nav-menu {
+    flex-basis: 100%;
+    flex-grow: 0;
+    align-items: center;
+}
+
+.block {
+    margin-bottom: 120px;
+}
+
+.block-acoes {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.ativo {
+    position: fixed;
+    background: #ffffff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+/* ============ CSS DO SLIDER======== */
+/* ============RETIRANDO OS PADDINGS DOS BANNERS================ */
+container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button {
+    font-weight: 500;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+
+.button:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* =================SEÇÃO DE AÇÕES=========== */
+#sobre-ruma {
+    height: 65vh;
+}
+
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+.acoes-container {
+    background-color: var(--background-ligth);
+    padding: 20px 0;
+    
+}
+
+#acoes a.destaque {
+    display: block;
+    background: var(--ligth);
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    color: #000;
+    text-decoration: none;
+    transition: all ease-out 0.2s;
+}
+
+#acoes a.destaque:hover {
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+}
+
+#acoes p {
+    color: var(--dark);
+}
+
+#acoes a.destaque .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+#acoes a.destaque .img-container img {
+    max-height: 160px;
+}
+
+.btn-acoes {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ===============CSS DOS DADOS DE ATINGIMENTO================== */
+.mb-6 {
+    margin: 6rem;
+}
+
+.row-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress1{
+    height: 5px;
+    background-color:var(--medium);
+    position: relative;
+}
+
+.progress1 .progress-bar1{
+   position: absolute;
+   height: 100%;
+   background-color: var(--primary);
+   animation: progress-animation1 3s;
+   animation-fill-mode: forwards;
+}
+
+
+@keyframes progress-animation1{
+    0% { width: 0%; }
+    
+    100% { width: 40%}
+    
+}
+
+.progress2{
+    height: 5px;
+    background-color:var(--medium);
+    position: relative;
+}
+
+.progress2 .progress-bar2{
+   position: absolute;
+   height: 100%;
+   background-color: var(--primary);
+   animation: progress-animation2 3s;
+   animation-fill-mode: forwards;
+}
+
+
+@keyframes progress-animation2{
+    0% { width: 0%; }
+    
+    100% { width: 65%}
+    
+}
+
+.progress3{
+    height: 5px;
+    background-color:var(--medium);
+    position: relative;
+}
+
+.progress3 .progress-bar3{
+   position: absolute;
+   height: 100%;
+   background-color: var(--primary);
+   animation: progress-animation3 3s;
+   animation-fill-mode: forwards;
+}
+
+
+@keyframes progress-animation3{
+    0% { width: 0%; }
+    
+    100% { width: 10%}
+    
+}
+
+.progress4{
+    height: 5px;
+    background-color:var(--medium);
+    position: relative;
+}
+
+.progress4 .progress-bar4{
+   position: absolute;
+   height: 100%;
+   background-color: var(--primary);
+   animation: progress-animation4 3s;
+   animation-fill-mode: forwards;
+}
+
+
+@keyframes progress-animation4{
+    0% { width: 0%; }
+    
+    100% { width: 70%}
+    
+}
+
+
+#data-area {
+    margin-top: 2rem;
+    color: var(--dark);
+    box-sizing: border-box;
+    
+}
+
+.container-icone-numero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.bi-heart {
+    color: var(--primary);
+}
+
+.bi-geo-alt {
+    color: var(--secondary);
+}
+
+.bi-graph-up-arrow {
+    color: lawngreen;
+}
+
+.bi-rocket-takeoff {
+    color: pink;
+}
+#animatedNumber1 {
+    margin-bottom: 0.1rem;
+}
+
+#animatedNumber2 {
+    margin-bottom: 0.1rem;
+}
+
+#animatedNumber3 {
+    margin-bottom: 0.1rem;
+}
+
+#animatedNumber4 {
+    margin-bottom: 0.1rem;
+}
+
+.titulo-numero {
+    margin-bottom: 0.1rem;
+    color: var(--secondary);
+}
+
+
+/* =============AJUSTE DO TAMANHO E LOCALIZAÇÃO DO BANNER PARA A TELA DO COMPUTADOR ============ */
+
+.carousel-inner{
+    height: 70vh;
+}
+
+@media (min-width: 1008px) { 
+    .carousel-caption{
+        position:absolute;
+        right:15%;
+        bottom:22rem;
+        left:15%;
+        padding-top:1.25rem;
+        padding-bottom:1.25rem;
+        color:#fff;
+        text-align:start;
+        font-size: 20px;
+} 
+
+h2{
+    font-size: 50px;
+    font-weight: bold;
+}
+h3{
+    font-size: 30px;
+}
+
+}
+
+@media (min-width: 768px){
+
+.col-md-3-dados {
+    flex: 0 0 auto;
+    width: 20%;
+    box-sizing: border-box;
+}
+    
+}
+
+@media (max-width: 640px) { 
+    .carousel-caption{
+        position:absolute;
+        right:15%;
+        bottom:0.1rem;
+        left:15%;
+        padding-top:1.25rem;
+        padding-bottom:1.25rem;
+        color:#fff;
+        text-align:start;
+        font-size: 20px;
+} 
+
+h2{
+    font-size: 18px;
+    font-weight: bold;
+}
+h3{
+    font-size: 14px;
+}
+
+}
+
+
+    
+
+
+
+
